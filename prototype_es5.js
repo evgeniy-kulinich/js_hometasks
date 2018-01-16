@@ -55,9 +55,10 @@ Microwave.prototype.cook = function(dish, time) {
 
 Microwave.prototype.start = function(dish, time) {
 	if(machine._condition) {
-		console.log('Start cooking ' + this.dish);
+		var that = this;
+		console.log('Start cooking ' + that.dish);
 			setTimeout(function() {
-				console.log('Your ' + this.dish + ' is ready!');
+				console.log('Your ' + that.dish + ' is ready!');
 			}, time);
 	} else {
 		console.log('The machine is turned off');
